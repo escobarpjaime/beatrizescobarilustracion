@@ -1,0 +1,85 @@
+:root{
+	--backgrownd-color: #ccc;
+	--color: #111;
+	--header-backgrownd-color: rgba(7, 10, 36, 0.815);
+	--header-color: #ccc;
+	--main-width: 80%;
+	--title-bar-height: 50px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+	background-color: var(--backgrownd-color);
+	color: var(--color);
+	margin: 0;
+}
+
+div{
+	margin: 0;
+}
+
+.bg{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -5;
+	/*filter: blur(2px);*/
+	background-image: url("../images/logo_high.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+.fg{
+	width: 100%;
+}
+
+.main{
+	margin: auto;
+	width: var(--main-width);
+}
+
+.presentacion{
+	height: calc(100% - var(--title-bar-height));
+	width: 100%;
+	margin: 0;
+	padding-top: 100px;
+	text-align: center;
+	align-items: center;
+}
+
+.presentacion-contenido{
+	border: solid 1px;
+	padding: 30px;
+	margin: auto;
+	width: 50%;
+}
+
+.title-bar{
+	position: sticky;
+	top: 0;
+	background-color: var(--header-backgrownd-color);
+	color: var(--header-color);
+	padding: 20px;
+	height: var(--title-bar-height);
+	width: 100%;
+}
+
+.vol01{
+	height: 200px;
+	width: 100%;
+	padding: 10px;
+}
+
+.vol02{
+	width: 100%;
+	background-color: #004450bd;
+	padding: 10px;
+	color:#b6e1e9;
+}
