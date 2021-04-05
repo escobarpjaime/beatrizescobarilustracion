@@ -10,6 +10,8 @@
 	--font-size: 12px;
 	--presentation-width: 500px;
 	--title-display: flex;
+	--header-min-height: 40px;
+	--footer-min-height: 40px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -89,6 +91,7 @@ a{
 	display: var(--title-display);
 	background-color: var(--header-backgrownd-color);
 	color: var(--header-color);
+	min-height: var(--footer-min-height);
 }
 
 .tittle-section{
@@ -100,7 +103,8 @@ a{
 }
 
 .presentacion{
-	height: calc(100% - var(--title-bar-height) * 2);
+	/*height: calc(100% - (var(--header-min-height) + var(--footer-min-height)));*/
+	height: --moz-calc(100% - 10%);
 	width: 100%;
 	margin: 0;
 	padding-top: 0;
@@ -173,6 +177,7 @@ footer{
 	height: 100%;
 	padding: 10px;
 	color: var(--header-color);
+	min-height: var(--footer-min-height);
 }
 
 .footer-content a{
