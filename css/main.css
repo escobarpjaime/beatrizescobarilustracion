@@ -1,26 +1,40 @@
 :root{
-	--backgrownd-color: #ccc;
+	--backgrownd-color: rgb(255, 255, 255);
 	--color: #111;
-	--header-backgrownd-color: rgba(7, 10, 36, 0.815);
+	--header-backgrownd-color: rgba(7, 10, 36, 0.842);
 	--header-color: #ccc;
 	--main-width: 80%;
-	--title-bar-height: 50px;
+	--title-bar-height: 40px;
+	--footer-height: 40px;
+	--font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	--font-size: 12px;
 }
 
+html{
+	scroll-behavior: smooth;
+}
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: var(--font);
 }
-
 
 body{
 	background-color: var(--backgrownd-color);
 	color: var(--color);
 	margin: 0;
+	font-size: var(--font-size);
 }
 
 div{
 	margin: 0;
+}
+
+a{
+	color:white;
+	text-decoration: none;
 }
 
 .bg{
@@ -32,7 +46,7 @@ div{
 	background-image: url("../images/logo_high.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 }
 
@@ -45,41 +59,111 @@ div{
 	width: var(--main-width);
 }
 
+.title-bar{
+	position: sticky;
+	top: 0;
+	background-color: var(--backgrownd-color);
+	color: var(--header-color);
+	height: var(--title-bar-height);
+	width: 100%;
+	background-image: url("../images/logo_high.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	background-position: center;
+}
+
+.title-bar-content{
+	display: flex;
+	background-color: var(--header-backgrownd-color);
+	height: 100%;
+	color: var(--header-color);
+}
+
+.tittle-section{
+	/*display: inline;*/
+	border-right: solid;
+	padding: 10px;
+	height: 100%;
+}
+
 .presentacion{
-	height: calc(100% - var(--title-bar-height));
+	height: calc(100% - var(--title-bar-height) * 2);
 	width: 100%;
 	margin: 0;
-	padding-top: 100px;
+	padding-top: 0;
 	text-align: center;
 	align-items: center;
 }
 
 .presentacion-contenido{
-	border: solid 1px;
-	padding: 30px;
-	margin: auto;
-	width: 50%;
+	position: sticky;
+	top: 40%;
+	width: 40%;
+	margin: 10px auto;
 }
 
-.title-bar{
-	position: sticky;
-	top: 0;
-	background-color: var(--header-backgrownd-color);
-	color: var(--header-color);
-	padding: 20px;
-	height: var(--title-bar-height);
+.presentacion-contenido-bg{
+	position: absolute;
+	top:0;
+	background-image: url("../images/logo_high.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	background-position: center;
+	filter: blur(5px);
+	height: 100%;
+	margin: auto;
 	width: 100%;
+	border: solid 1px blue;
+}
+
+.presentacion-contenido-fg{
+	position: relative;
+	top:0;
+	padding: 5vh;
+	border: solid 3px #2222aa;
+	border-radius: 4px;
+	width: 100%;
+	margin: auto;
+	background-color: #ffffff40;
+	color: #2222aa;
 }
 
 .vol01{
-	height: 200px;
-	width: 100%;
-	padding: 10px;
+	padding: 5vh;
+	background-color: #010057c5;
+	margin: 10px 0;
 }
 
 .vol02{
-	width: 100%;
-	background-color: #004450bd;
-	padding: 10px;
 	color:#b6e1e9;
+}
+
+footer{
+	margin: auto;
+	position: fixed;
+	width: var(--main-width);
+	/*background-color: var(--header-backgrownd-color);*/ 
+	background-color: var(--backgrownd-color);
+	color: var(--header-color);
+	height: var(--title-bar-height);
+	bottom: 0px;
+	padding: 0;
+	background-image: url("../images/logo_high.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	background-position: center;
+}
+
+.footer-content{
+	background-color: var(--header-backgrownd-color);
+	height: 100%;
+	padding: 10px;
+	color: var(--header-color);
+}
+
+.footer-content a{
+	color: var(--header-color);
 }
