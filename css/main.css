@@ -104,7 +104,7 @@ a{
 
 .presentacion{
 	/*height: calc(100% - (var(--header-min-height) + var(--footer-min-height)));*/
-	height: --moz-calc(100% - 10%);
+	height: calc(100% - 10px);
 	width: 100%;
 	margin: 0;
 	padding-top: 0;
