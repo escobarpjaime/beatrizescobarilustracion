@@ -7,16 +7,19 @@
 	--header-color: #ccc;
 	--font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	--main-width: 80%;
-	--title-bar-height: 40px;
-	--footer-height: 40px;
 	--font-size: 12px;
+	--presentation-width: 500px;
+	--title-display: flex;
 }
 
 @media only screen and (max-width: 600px) {
 	:root{
-		--title-bar-height: 100px;
-		--footer-height: 100px;
-		--font-size: 20px;
+		--main-width: calc(100% - 10px);
+		/*--font-size: 10px;*/
+		--header-backgrownd-color: rgba(36, 7, 18, 0.842);
+		--presentation-width: 300px;
+		--title-display: flex;
+}
 	}
 }
 
@@ -74,7 +77,6 @@ a{
 	top: 0;
 	background-color: var(--backgrownd-color);
 	color: var(--header-color);
-	height: var(--title-bar-height);
 	width: 100%;
 	background-image: url("../images/logo_high.jpg");
 	background-repeat: no-repeat;
@@ -84,17 +86,17 @@ a{
 }
 
 .title-bar-content{
-	display: flex;
+	display: var(--title-display);
 	background-color: var(--header-backgrownd-color);
-	height: 100%;
 	color: var(--header-color);
 }
 
 .tittle-section{
-	/*display: inline;*/
+	display: inline	;
 	border-right: solid;
+	/*border-left: solid;*/
+	border-width: 1px;
 	padding: 10px;
-	height: 100%;
 }
 
 .presentacion{
@@ -109,7 +111,7 @@ a{
 .presentacion-contenido{
 	position: sticky;
 	top: 40%;
-	width: 40%;
+	width: var(--presentation-width);
 	margin: 10px auto;
 }
 
@@ -157,7 +159,6 @@ footer{
 	/*background-color: var(--header-backgrownd-color);*/ 
 	background-color: var(--backgrownd-color);
 	color: var(--header-color);
-	height: var(--title-bar-height);
 	bottom: 0px;
 	padding: 0;
 	background-image: url("../images/logo_high.jpg");
