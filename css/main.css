@@ -38,6 +38,8 @@
 
 html{
 	scroll-behavior: smooth;
+	padding: 0;
+	margin: 0;
 }
 
 * {
@@ -51,8 +53,8 @@ body{
 	background-color: var(--backgrownd-color);
 	color: var(--color);
 	margin: 0;
+	padding: 0;
 	font-size: var(--font-size);
-	height: 100%;
 }
 
 div{
@@ -93,11 +95,12 @@ a{
 	background-color: var(--backgrownd-color);
 	color: var(--header-color);
 	width: 100%;
-	background-image: url("../images/logo_high.jpg");
+	/*border-bottom: solid 3px white*/
+	/*background-image: url("../images/logo_high.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: contain;
-	background-position: center;
+	background-position: center;*/
 }
 
 .title-bar-content{
@@ -116,19 +119,27 @@ a{
 }
 
 .presentacion{
+	position:static;
+	top: 0;
+	z-index: -5;
 	height: calc(100vh - (var(--header-min-height) + var(--footer-min-height)));
 	width: 100%;
 	margin: 0;
 	padding-top: 0;
 	text-align: center;
 	align-items: center;
+	background-image: url("../images/logo_high.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	background-position: center;
 }
 
 .presentacion-contenido{
 	position: sticky;
 	top: calc(50% - 100px);
 	width: var(--presentation-width);
-	margin: 10px auto;
+	margin: auto;
 }
 
 .presentacion-contenido-bg{
@@ -147,7 +158,7 @@ a{
 }
 
 .presentacion-contenido-fg{
-	position: relative;
+	position: sticky;
 	top:0;
 	padding: 5vh;
 	border: solid 3px #2222aa;
@@ -160,35 +171,46 @@ a{
 	color: #2222aa;
 }
 
+.main-content{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: white;
+}
+
 .vol01{
-	padding: 5vh;
+	padding: 20px;
 	background-color: #010057c5;
-	margin: 10px 0;
+	margin: 5px;
+	border-radius: 5px;
+	/*width: calc(100% / 3 - 10px);*/
+	/*min-width: 400px;*/
 }
 
 .vol02{
 	color:#b6e1e9;
 }
 
+.imagen-cluster{
+	max-width: 100%;
+	max-height: 300px;
+}
+
 footer{
 	margin: auto;
-	position: fixed;
-	width: var(--main-width);
-	/*background-color: var(--header-backgrownd-color);*/ 
+	position: sticky;
+	bottom: 0px;
+	/*height: 40px;*/
+	/*width: 100%;*/
 	background-color: var(--backgrownd-color);
 	color: var(--header-color);
-	bottom: 0px;
 	padding: 0;
-	background-image: url("../images/logo_high.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: contain;
-	background-position: center;
 }
 
 .footer-content{
 	background-color: var(--header-backgrownd-color);
-	height: 100%;
+	/*height: 100%;*/
 	padding: 10px;
 	color: var(--header-color);
 	min-height: var(--footer-min-height);
